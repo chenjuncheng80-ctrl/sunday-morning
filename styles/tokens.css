@@ -1,0 +1,100 @@
+/* ==========================================================================
+   tokens.css — design tokens
+   Direction: warm paper picture-book x screen print
+   60% paper, 30% warm ink, 10% brick accent
+   ========================================================================== */
+
+:root {
+  /* ── Paper and ink ─────────────────────────────────────────── */
+  --paper:      #f4ead6;
+  --paper-2:    #ecdfc4;
+  --paper-3:    #ddcbaa;
+  --paper-4:    #cdb894;
+  --ink:        #2e2820;
+  --ink-2:      #5d5344;
+  --ink-3:      #8b7c65;
+  --rule:       rgba(46, 40, 32, 0.16);
+  --rule-soft:  rgba(46, 40, 32, 0.08);
+
+  /* ── Accent ───────────────────────────────────────────── */
+  --amber:      #d79a41;
+  --amber-soft: #eac989;
+  --brick:      #b04f33;
+  --brick-deep: #8d3a22;
+  --sage:       #6f7f57;
+
+  /* ── Weather (read by JS, do not rename) ─────────────────────── */
+  --sky-clear-a: #cfe4e9;
+  --sky-clear-b: #eef1ea;
+  --sky-sun-a:   #bfe1f1;
+  --sky-sun-b:   #f8f2d6;
+  --sky-over-a:  #ccd1d3;
+  --sky-over-b:  #e4e5e2;
+  --sky-driz-a:  #a9b9c1;
+  --sky-driz-b:  #cbd5d8;
+  --sky-storm-a: #59626f;
+  --sky-storm-b: #8b909a;
+
+  /* ── Type ───────────────────────────────────────────── */
+  --font-display: "Fraunces", "Noto Serif TC", "Songti TC", "SimSun", serif;
+  --font-body:    "Noto Serif TC", "Songti TC", "SimSun", "Source Han Serif TC", serif;
+  --font-ui:      "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+
+  /* ── Type scale (modular, 1.25) ───────────────────────────── */
+  --t-xs:   0.72rem;
+  --t-sm:   0.82rem;
+  --t-base: 0.95rem;
+  --t-md:   1.12rem;
+  --t-lg:   1.42rem;
+  --t-xl:   1.85rem;
+  --t-2xl:  clamp(2.4rem, 1.4rem + 4.4vw, 4.6rem);
+  --t-3xl:  clamp(3.2rem, 1.4rem + 8vw, 7.4rem);
+
+  /* ── Spacing (multiples of 4) ───────────────────────────── */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 14px;
+  --s-4: 22px;
+  --s-5: 36px;
+  --s-6: 56px;
+  --s-7: 88px;
+
+  /* ── Rules and corners ─────────────────────────────────────────── */
+  --hair: 1px solid var(--rule);
+  --radius-sm: 2px;
+  --radius-md: 4px;
+
+  /* ── Shadows (tinted, never pure black) ───────────────────────── */
+  --shadow-1: 0 2px 6px rgba(70, 52, 28, 0.10);
+  --shadow-2: 0 8px 26px rgba(70, 52, 28, 0.14);
+  --shadow-3: 0 24px 60px rgba(58, 42, 22, 0.20);
+
+  /* ── Motion ───────────────────────────────────────────── */
+  --ease:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-1: 160ms;
+  --dur-2: 320ms;
+  --dur-3: 640ms;
+  --dur-4: 1100ms;
+
+  /* ── Scene light (rewritten by JS from hour and weather) ─────────────── */
+  --light-a: rgba(255, 246, 224, 0.00);
+  --light-b: rgba(255, 246, 224, 0.00);
+  --light-c: rgba(60, 70, 90, 0.00);
+}
+
+/* Light by hour: cool morning -> white noon -> gold afternoon -> copper dusk */
+body[data-clock="07"] { --light-a: rgba(203, 222, 236, 0.36); --light-b: rgba(255, 250, 235, 0.06); }
+body[data-clock="08"] { --light-a: rgba(212, 228, 236, 0.30); --light-b: rgba(255, 249, 232, 0.10); }
+body[data-clock="09"] { --light-a: rgba(226, 236, 230, 0.28); --light-b: rgba(255, 250, 230, 0.14); }
+body[data-clock="10"] { --light-a: rgba(246, 240, 214, 0.26); --light-b: rgba(255, 252, 236, 0.18); }
+body[data-clock="11"] { --light-a: rgba(252, 244, 208, 0.28); --light-b: rgba(255, 253, 240, 0.22); }
+body[data-clock="12"] { --light-a: rgba(255, 250, 226, 0.30); --light-b: rgba(255, 255, 248, 0.26); }
+body[data-clock="15"] { --light-a: rgba(246, 196, 118, 0.34); --light-b: rgba(255, 226, 168, 0.22); }
+body[data-clock="15b"] { --light-a: rgba(232, 168, 96, 0.38);  --light-b: rgba(246, 200, 140, 0.18); }
+
+/* Weather tinting the indoor light */
+body[data-weather="Storm"]    { --light-c: rgba(46, 58, 86, 0.34); }
+body[data-weather="Drizzles"] { --light-c: rgba(74, 92, 106, 0.20); }
+body[data-weather="Overcast"] { --light-c: rgba(96, 96, 88, 0.16); }
+body[data-weather="Unknown"]  { --light-c: rgba(120, 110, 90, 0.10); }

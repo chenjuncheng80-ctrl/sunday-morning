@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-page-node-id="avmS14j5T3XHktpMtNEA3x">
+<head data-page-node-id="Txq10kpOYd46tePMWXhDeS">
+<meta charset="utf-8" data-page-node-id="tjFxwy21NMIEx2xcRvkJqM">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" data-page-node-id="s17vmExDK5YTlUNa3z08sV">
+<title>Sunday Morning · after Xi Xi</title>
+<meta name="description" content="A playable adaptation of Xi Xi's poem Sunday Morning (translated by Howard Goldblatt). One room, one summer Sunday, and a set of brackets waiting to be filled." data-page-node-id="7p1MncJ9GgwwAdKp70jV09">
+<meta name="theme-color" content="#f4ead6" data-page-node-id="vCZ6IBSk0CQBeEPRCCCtCc">
+<link rel="preconnect" href="https://fonts.googleapis.com" data-page-node-id="DDb4gEMnNhhTfj5Fqx2912">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin data-page-node-id="3aDYCdtJUIM5GIAmsN8k6Z">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,500&amp;family=Noto+Serif+TC:wght@400;600&amp;family=Noto+Sans+TC:wght@400;500&amp;display=swap" rel="stylesheet" data-page-node-id="6zSWh2lOhq0OGfFHuFfwNL">
+<link rel="stylesheet" href="styles/tokens.css" data-page-node-id="wdm3qB0rYEeHebD9xLM7cM">
+<link rel="stylesheet" href="styles/base.css" data-page-node-id="DE6BiYB5kh5nCu85XMupHX">
+<link rel="stylesheet" href="styles/game.css" data-page-node-id="81hQ4JdUPyGGoZxsGmidHL">
+</head>
+<body data-weather="Unknown" data-clock="07" data-page-node-id="ZzWy7oA4xytb37uFI5oHYi">
+
+<a class="skip-link" href="#panel" data-page-node-id="Vxggimvvz9k0iLmyCkaYJD">Skip to the choices</a>
+
+<div class="book" id="book" data-page-node-id="F2xzaQnalDAEi9gGD96uHp">
+
+  <!-- ── Status bar ───────────────────────────────────────── -->
+  <header class="hud" id="hud" data-page-node-id="agOBTUrBH5RyoK9jzu7pOF">
+    <div class="hud__brand" aria-hidden="true" data-page-node-id="08DK4XHki9OXVAvloQMaiF">
+      <span class="hud__brand-cn" data-page-node-id="wywuuYGCVCwKlK5FExYGnB">Sunday Morning</span>
+      <span class="hud__brand-en" data-page-node-id="TnChxgL4M3q0lnVJChhzfU">after Xi Xi</span>
+    </div>
+
+    <div class="hud__rule" aria-hidden="true" data-page-node-id="tSAaHjGOcBdEktkjE6MMlO"></div>
+
+    <dl class="hud__stats" data-page-node-id="WS5ENiaZyeJAbQT7MtuhO0">
+      <div class="stat stat--time" data-page-node-id="2WiR9XoaLqkQCRCpc8NkHK">
+        <dt data-page-node-id="RlcH87FwM9xbZGIiBFe2i6">Time</dt>
+        <dd id="hud-time" data-page-node-id="jnxuOgy9EgTlmrUyzAG5Gw">07:00</dd>
+      </div>
+      <div class="stat stat--weather" data-page-node-id="wDeMxlAtIrsmfM2D5zmBWK">
+        <dt data-page-node-id="jxVHCGUVlqRy9gzpRk3EVW">Weather</dt>
+        <dd id="hud-weather" data-page-node-id="jfHDLfDnI7UHCepvx3PoXQ">Unknown</dd>
+      </div>
+      <div class="stat stat--energy" data-page-node-id="WpYHjrE39fa8eJT9vk4ajn">
+        <dt data-page-node-id="63eGN2p34r3QsXO6pzk9j2">Energy</dt>
+        <dd data-page-node-id="6rwCSIS7wzaJsINstSmHel">
+          <div class="meter" role="img" aria-labelledby="hud-energy-num" data-page-node-id="f3RdMFYbWJKAR1B4RkbDDf">
+            <div class="meter__fill" id="hud-energy" style="--v:80" data-page-node-id="PBu7Vy11bugtGhlbFdO7kb"></div>
+          </div>
+          <span class="stat__num" id="hud-energy-num" data-page-node-id="IJinCH1gWkzFMlTyUFNsgh">80</span>
+        </dd>
+      </div>
+      <div class="stat stat--coins" data-page-node-id="zHwpFrYULpZjCpsfHcz0Oo">
+        <dt data-page-node-id="ViBqTGVFW0rfoWUzypeFoF">Coins</dt>
+        <dd id="hud-coins" data-page-node-id="YqhG5j49ZdU1XMPZcQvhlS">0</dd>
+      </div>
+      <div class="stat stat--mood" data-page-node-id="hFuUwM3o4v96dFgfhdOZdR">
+        <dt data-page-node-id="VCIET8YAw5jmOqA0BteVMe">Mood</dt>
+        <dd id="hud-mood" data-page-node-id="Fp7YcBBnD3Ji4zAg1GWXqs">Neutral</dd>
+      </div>
+    </dl>
+  </header>
+
+  <!-- ── Scene ────────────────────────────────────────────── -->
+  <main class="stage" id="stage" aria-label="Scene" data-page-node-id="VxuzyBXxXbRhkHOF44wvpY">
+    <div class="stage__scene" id="scene" data-page-node-id="yfaTFZ3isYFPRaX5JmXeII"></div>
+    <div class="stage__fx" id="fx" aria-hidden="true" data-page-node-id="n2EQeSOWt6La1rI5rC2lo8"></div>
+    <div class="stage__light" id="light" aria-hidden="true" data-page-node-id="f47KRFRUfqbBKayvTwSORy"></div>
+    <div class="stage__floaters" id="floaters" aria-hidden="true" data-page-node-id="wnnRGR9YfmWpuh10NlDvqT"></div>
+    <p class="stage__folio" aria-hidden="true" data-page-node-id="4ruOxqyjzpQoFv6qXCDeun"><span id="folio-scene" data-page-node-id="zGD10l8VnKM69LNOM4OgQC">Bedroom</span> · <span id="folio-n" data-page-node-id="soYaAO1e0lJU3KE76YWH9B">i</span></p>
+  </main>
+
+  <!-- ── Narration and choices ────────────────────────────── -->
+  <section class="panel" id="panel" aria-live="polite" data-page-node-id="qByhUmzMU6Y7lHvFTw29Mk">
+    <p class="narration" id="narration" data-page-node-id="iB93sETSmzafa4yAlyQwQe"></p>
+    <div class="options" id="options" data-page-node-id="rJZGSjNQZt4Ew8TFRiFN28"></div>
+    <p class="panel__hint" id="hint" data-page-node-id="ZW6G59keF7eX94DDdr6qsY">Click an object in the room, or choose below.</p>
+  </section>
+
+</div>
+
+<!-- ── Title ──────────────────────────────────────────────── -->
+<div class="title" id="title" data-page-node-id="2HaKIaaMlfriG34JgdPwNC">
+  <div class="title__card" data-page-node-id="pFQErrbIaWGgYL3XwhbI3O">
+    <p class="title__kicker" data-page-node-id="CAxctdkYnw2JKZgtEWQjG4">after Xi Xi · translated by Howard Goldblatt</p>
+    <h1 class="title__h1" data-page-node-id="3NzgotRs63iCIUMSGAMiNW">Sunday<span data-page-node-id="arxjHChbl6JqAu9F1YysnA">Morning</span></h1>
+    <p class="title__en" data-page-node-id="IQDD9kp160Fm62gvHamLG9">a playable poem</p>
+    <p class="title__lede" data-page-node-id="kVAjvFcnpiEr1wQP200qU9">
+      It is summer. Sunday morning.<br data-page-node-id="DDHYAnfYEOPDB9we3kUhFh">
+      You are awake, lying in bed, not yet sure whether to get up.<br data-page-node-id="eOxwN6WRd2yDjSSJnffTkO">
+      The weather, the mirror, the fridge —<br data-page-node-id="WxASe6hIwHeZhndNKu7tcw">
+      today will be decided by them.
+    </p>
+    <button class="btn btn--start" id="start" type="button" data-page-node-id="kCnigAaMKuKrGtvOaKLTtE">Get up</button>
+    <p class="title__note" data-page-node-id="70k3S5F4ExcZp0dUmAysDq">Ten minutes. No instructions. No way to lose.</p>
+  </div>
+</div>
+
+<script src="scripts/scenes.js"></script>
+<script src="scripts/game.js"></script>
+</body>
+</html>

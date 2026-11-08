@@ -1,0 +1,95 @@
+/* ==========================================================================
+   base.css — reset, typography, paper grain, accessibility
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+  /* The paper is not flat: two very faint washes plus darkened corners */
+  background-image:
+    radial-gradient(120rem 60rem at 12% -20%, rgba(255, 250, 236, 0.85), transparent 62%),
+    radial-gradient(90rem 50rem at 108% 118%, rgba(198, 172, 128, 0.32), transparent 58%),
+    linear-gradient(168deg, #f7efdd 0%, #f2e7d0 52%, #eddfc3 100%);
+}
+
+/* Grain: an SVG feTurbulence layer on top, texture only */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.055;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1, h2, h3, p, dl, dd, dt, figure { margin: 0; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ── Focus: a printed double ring, never the default blue box ───────────────────── */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--brick);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Skip link ───────────────────────────────────────────── */
+.skip-link {
+  position: fixed;
+  top: -60px;
+  left: var(--s-3);
+  z-index: 200;
+  padding: var(--s-2) var(--s-3);
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-ui);
+  font-size: var(--t-sm);
+  text-decoration: none;
+  transition: top var(--dur-1) var(--ease);
+}
+.skip-link:focus { top: var(--s-2); }
+
+/* ── Selection colour ───────────────────────────────────────────── */
+::selection { background: var(--amber-soft); color: var(--ink); }
+
+/* ── Custom scrollbar (the panel scrolls on narrow screens) ─────────────────────── */
+.panel { scrollbar-width: thin; scrollbar-color: var(--paper-4) transparent; }
+.panel::-webkit-scrollbar { width: 8px; }
+.panel::-webkit-scrollbar-thumb {
+  background: var(--paper-4);
+  border-radius: 99px;
+}
+
+/* ── Degrade: every decorative animation off ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
